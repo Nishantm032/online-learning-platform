@@ -3,6 +3,7 @@ import Navbar from '../../components/student/Navbar'
 import { assets } from '../../assets/assets'
 import SearchBar from '../SearchBar'
 
+
 const Hero = () => {
   return (
   <div className='flex flex-col items-center justify-center w-full md:pt-36 pt-20px-7 
@@ -18,6 +19,7 @@ const Hero = () => {
   <p className='md:hidden text-gray-500 max-w-sm mx-auto'>We bring together world-class instructors to help you achieve your
     professional goals.</p>
   <SearchBar />
+
 
   </div>
   )
