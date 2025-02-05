@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import humanizeDuration from "humanize-duration";
 import Youtube from 'react-youtube'
+import Footer from "../../components/student/Footer";
 
 const Player = () => {
 
@@ -116,19 +117,22 @@ useEffect(()=>{
               </div>
             ))}
           </div>
+
+
+          
         </div>
 
         {/*Right column */}
-        <div >
+        <div className="md-mt-10">
           {playerData ? (
             <div>
               <Youtube
               videoId={playerData.lectureUrl.split('/').pop()}
               iframeClassName="w-full aspect-video"  />
 
-              <div>
+              <div className="flex justify-between items-center mt-1">
                 <p>{playerData.chapter}.{playerData.lecture} {playerData.lectureTitle}</p>
-                <button>Mark Complete</button>
+                <button className="text-blue-600">{false ? 'Completed' : 'Mark Complete'}</button>
               </div>
 
             </div>
@@ -138,6 +142,7 @@ useEffect(()=>{
 }
         </div>
       </div>
+      <Footer />
     </>
   );
 };
